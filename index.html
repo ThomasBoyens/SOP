@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h2>SOP example 2</h2>
-<iframe id="frame" src=" https://www.orange.be/"></iframe>
+<h2>Using the XMLHttpRequest Object</h2>
+<div id="demo">
+<button type="button" onclick="loadXMLDoc()">Get Content</button>
+</div>
 <script>
- window.onload = function() {
- setTimeout(function(){
- document.getElementById(frame).contentWindow.innerHTML;
- },5000)
+function loadXMLDoc() {
+ var xhttp = new XMLHttpRequest();
+ xhttp.onreadystatechange = function() {
+ if (this.readyState == 4 && this.status == 200) {
+ document.getElementById("demo").innerHTML =
+ this.responseText;
+ }
  };
+ xhttp.open("GET", "https://api-websec.herokuapp.com/" , true);
+ xhttp.send();
+}
 </script>
 </body>
 </html>
