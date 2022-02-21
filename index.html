@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <body>
-<h2>SOP example 2</h2>
-<!--- <iframe id="frame" src=" https://www.orange.be/"></iframe> --->
-<iframe id="frame" src="https://developers.facebook.com/docs/plugins/like-button/"></iframe>
-<script>
- window.onload = function() {
- setTimeout(function(){
- document.getElementById(frame).contentWindow.innerHTML;
- },5000)
- };
-</script>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0"
+        nonce="0QFsWnT4"></script>
+    <h2>SOP example 2</h2>
+    <!--- <iframe id="frame" src=" https://www.orange.be/"></iframe> --->
+    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/like-button/" data-width=""
+        data-layout="standard" data-action="like" data-size="small" data-share="false"></div>
+    <script>
+        window.onload = function () {
+            setTimeout(function () {
+                document.getElementById(frame).contentWindow.innerHTML;
+            }, 5000)
+        };
+    </script>
 </body>
+
 </html>
